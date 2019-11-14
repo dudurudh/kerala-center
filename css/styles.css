@@ -1,0 +1,83 @@
+:root {
+  --dark-blue: rgba(10, 62, 95, 100);
+  --dark-blue-50: rgba(10, 62, 95, 0.5);
+  --dark-blue-20: rgba(10, 62, 95, 0.2);
+  --light-blue: rgba(18, 104, 157, 100);
+  --light-green: #609e09;
+  --light-blue-008: rgba(18, 104, 157, 0.08);
+  --dull-blue:  rgba(139,163,179,1);
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  font-family: 'Philosopher', sans-serif;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+}
+
+.hero{
+  /* background-image: url('../img/hero.jpeg');
+  background-color: rgba(0,0,0,0.3);
+  background-blend-mode: multiply; */
+  background: linear-gradient(#00000000, #000000c9), url("../img/hero.jpeg") no-repeat center; 
+  height: 75vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1{
+  display: flex;
+  margin: 0 0 0.1em 0em;
+  color: #f6f6f6;
+  line-height:1;
+  font-size: 52pt;
+}
+.hero p{
+  display: flex;
+  margin: 0 0 2em 0em;
+  color: #ffffff;
+  font-size: 12pt;
+}
+
+.about{
+  padding: 1em 3em 1em 3em;
+}
+
+.menu{
+  display: table; /* Make the container element behave like a table */
+  width: 98%;
+  background-color: rgb(255, 193, 60);
+  padding: 0 1% 0 1%;
+}
+.menu-items{
+  padding: 1em 0.2em 1em 0.2em;
+  display: table-cell; 
+  width: 8%;
+  text-align:center;
+  vertical-align: middle;
+ 
+}
+.menu-items:hover{
+  background-color: rgb(238, 212, 157);
+  cursor: pointer;
+}
+.menu p{
+  font-size: 11pt;
+  color: rgb(85, 47, 11);
+  font-weight: 700;
+  margin:0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 578px){
+  .menu{
+    display:none;
+  }
+}
