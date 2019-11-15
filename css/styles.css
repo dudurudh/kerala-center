@@ -49,6 +49,7 @@ body {
 
 .about{
   padding: 1em 3em 1em 3em;
+  font-size: 1.25em;
 }
 
 .menu{
@@ -76,8 +77,107 @@ body {
   margin:0;
 }
 
-@media screen and (min-width: 320px) and (max-width: 578px){
+.f-desktop .f-pres{
+  background-color:rgba(238, 212, 157, 0.356);
+  text-align:center;
+}
+.f-mobile .f-pres{
+  background-color:rgba(238, 212, 157, 0.356);
+  text-align:center;
+}
+.f-pat{
+  background-color:rgba(238, 212, 157, 0.192);
+  text-align:center;
+}
+
+.f-item{
+  padding: 1em 0.2em 1em 0.2em;
+  text-align:center;
+  vertical-align: middle;
+}
+table, th, td {
+  border: 0;
+  border-collapse: collapse;
+}
+table{
+  width:100%;
+}
+th, td {
+  padding: 5px;  
+}
+.f-name{
+text-align:center;
+}
+.f-name p{
+  margin:0;
+  color:rgb(85, 47, 11);
+}
+.activity-title{
+  margin:0;
+  color:rgb(85, 47, 11);
+  font-size: 1.25em;
+}
+.f-name h4{
+  margin: 1rem 0 0 0;
+}
+.f-image{
+  display: inline-block;
+  position: relative;
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid rgb(255, 193, 60);
+}
+.f-desktop{
+  display:block;
+  text-align: center;
+}
+.f-mobile{
+  display:none;
+  text-align: center;
+
+}
+.f-mobile table{
+  /* width: 40%; */
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.separator{
+  background-color:rgba(238, 212, 157, 0.192);
+  text-align: center;
+  padding: 0.1em;
+}
+.activites{
+  text-align:center;
+}
+
+@media screen and (min-width: 800px) and (max-width: 943px){
+  .f-desktop{
+    display:none;
+    text-align: center;
+  }
+  .f-mobile{
+    display:block;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 799px){
   .menu{
     display:none;
+  }
+  .f-desktop{
+    display:none;
+    text-align: center;
+  }
+  .f-mobile{
+    display:block;
+    text-align: center;
+  }
+  .f-mobile table{
+    width: 100%;
   }
 }
