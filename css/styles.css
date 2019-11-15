@@ -163,11 +163,19 @@ text-align:center;
     display:block;
     text-align: center;
   }
+  .about{
+    padding: 1em 2em 1em 2em;
+    text-align:center;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 799px){
   .menu{
     display:none;
+  }
+  .about{
+    padding: 1em 1em 1em 1em;
+    text-align:center;
   }
   .f-desktop{
     display:none;
