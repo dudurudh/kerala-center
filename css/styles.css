@@ -47,46 +47,120 @@ body {
   font-size: 12pt;
 }
 
-.about{
-  padding: 1em 3em 1em 3em;
-  font-size: 1.25em;
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: rgb(255, 193, 60);
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
 }
 
-.menu{
-  display: table; /* Make the container element behave like a table */
-  width: 98%;
-  background-color: rgb(255, 193, 60);
-  padding: 0 1% 0 1%;
-}
-.menu-items{
-  padding: 1em 0.2em 1em 0.2em;
-  display: table-cell; 
-  width: 8%;
-  text-align:center;
-  vertical-align: middle;
- 
-}
-.menu-items:hover{
-  background-color: rgb(238, 212, 157);
-  cursor: pointer;
-}
-.menu p{
-  font-size: 11pt;
+/* Style the links inside the navigation bar */
+.topnav a {
+  width:10%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  float:left;
+  display: block;
+  text-align: center;
   color: rgb(85, 47, 11);
+  padding: 1em 1em 1em 1em;
+  text-decoration: none;
+  font-size: 11pt;
   font-weight: 700;
   margin:0;
 }
 
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgb(238, 212, 157);
+  cursor: pointer;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav-m a {
+  width:10%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  float:left;
+  display: block;
+  text-align: center;
+  color: rgb(85, 47, 11);
+  padding: 1em 1em 1em 1em;
+  text-decoration: none;
+  font-size: 11pt;
+  font-weight: 700;
+  margin:0;
+}
+
+/* Change the color of links on hover */
+.topnav-m a:hover {
+  background-color: rgb(238, 212, 157);
+  cursor: pointer;
+}
+
+/* Add an active class to highlight the current page */
+.topnav-m a.active {
+  background-color: rgb(238, 212, 157);
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav-m .icon {
+  background-color: #222222;
+  color:rgb(255, 193, 60);
+  display: none;
+  font-size: 1.25em;
+}
+.about{
+  padding: 4em 3em 4em 3em;
+  font-size: 1.1em;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+}
+
+.about-text{
+  padding-left: 8em;
+}
+.about-text p{
+  margin:0;
+}
+
+.about-text h2{
+  color:rgb(85, 47, 11);
+  margin:0 0 0.5em 0;
+}
+
+.activites{
+  padding: 2em 3em 2em 3em;
+  font-size: 1.25em;
+}
+
+
 .f-desktop .f-pres{
-  background-color:rgba(238, 212, 157, 0.356);
+  /* background-color:rgba(238, 212, 157, 0.192); */
   text-align:center;
 }
 .f-mobile .f-pres{
-  background-color:rgba(238, 212, 157, 0.356);
+  /* background-color:rgba(238, 212, 157, 0.192); */
   text-align:center;
 }
 .f-pat{
-  background-color:rgba(238, 212, 157, 0.192);
+  /* background-color:rgba(238, 212, 157, 0.192); */
   text-align:center;
 }
 
@@ -149,11 +223,95 @@ text-align:center;
   background-color:rgba(238, 212, 157, 0.192);
   text-align: center;
   padding: 0.1em;
+  
 }
 .activites{
   text-align:center;
 }
+.quote{
+  display:flex;
+  flex-direction:row;
+  padding: 2em 3em 2em 3em;
+  align-items: center;
+  justify-content: center;
+  background-color:rgba(238, 212, 157, 0.192);
 
+}
+.quote p{
+  text-align:center;
+  font-size: 1.1em;
+  padding: 0em 3em 0em 3em;
+  flex:1;
+}
+.c-image{
+  text-align: center;
+}
+#center{
+  border: 4px solid rgb(255, 193, 60);
+}
+.guru{
+  font-size: 1em;
+  color:rgb(85, 47, 11);
+}
+.image-bg{
+  text-align:center;
+  background-color:rgba(238, 212, 157, 0.192);
+  padding: 2em;
+}
+li{
+  line-height: 2em;
+  height: auto;
+}
+ul {
+  list-style: none; /* Remove default bullets */
+}
+ul li::before {
+  content: "\2022";  
+  color: rgb(255, 193, 60);
+  font-size: 1.4em;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em; 
+  margin-left: -1em; 
+  margin-top: 0.3em;
+}
+.members-list{
+  display:flex;
+  flex-direction: row;
+}
+.members-list ul{
+  flex:1;
+  margin:0;
+}
+.benefactors{
+  text-align: left;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom:0;
+}
+.benefactors .about-text h2{
+  background-color:rgba(238, 212, 157, 0.192);
+  padding: 1em;
+}
+
+.benefactors .about-text{
+  width:100%;
+}
+
+.directors{
+  display:flex;
+  flex-direction: column;
+}
+
+.directors .about-text{
+  padding-left:0;
+}
+
+#founders,#members,#officials,#about,#activities{
+  display: block;
+  position: relative;
+  top: -75px;
+}
 @media screen and (min-width: 800px) and (max-width: 943px){
   .f-desktop{
     display:none;
@@ -167,15 +325,75 @@ text-align:center;
     padding: 1em 2em 1em 2em;
     text-align:center;
   }
+  .quote{
+    display:flex;
+    flex-direction:column;
+    padding: 1em 1em 1em 1em;
+  }
+  .about{
+    display:flex;
+    flex-direction:column;
+    padding: 1em 1em 1em 1em;
+  }
+  .about-text{
+    padding-left: 0em;
+  }
+  .about-text h2{
+    padding: 1em 0.5em 1em 0.5em;
+    text-align:center;
+  }
+  .about-text p{
+    padding: 0 0.5em 1em 0.5em;
+    text-align:justify;
+  }
+  .members-list{
+    display:flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 799px){
-  .menu{
-    display:none;
+  .topnav  
+  {
+    display: none;
   }
+  .topnav-m a.icon {
+    float: right;
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .topnav.responsive 
+  {
+    position: relative;
+  }
+  .topnav.responsive a.icon 
+  {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive  
+  {
+    background-color: rgba(255, 193, 60, 0.945);
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  position:absolute;
+  top:60px;
+  
+  }
+  .topnav a {
+    width:100%;
+    display:flex;
+    padding: 1em 1em 1em 1em;
+  }
+
   .about{
     padding: 1em 1em 1em 1em;
-    text-align:center;
   }
   .f-desktop{
     display:none;
@@ -187,5 +405,31 @@ text-align:center;
   }
   .f-mobile table{
     width: 100%;
+  }
+  .quote{
+    display:flex;
+    flex-direction:column;
+    padding: 1em 1em 1em 1em;
+  
+  }
+  .about{
+    display:flex;
+    flex-direction:column;
+    padding: 2em 1em 2em 1em;
+  }
+  .about-text{
+    padding-left: 0em;
+  }
+  .about-text h2{
+    padding: 1em 0.5em 1em 0.5em;
+    text-align:center;
+  }
+  .about-text p{
+    padding: 0 0.5em 1em 0.5em;
+    text-align:justify;
+  }
+  .members-list{
+    display:flex;
+    flex-direction: column;
   }
 }
