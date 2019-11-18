@@ -55,6 +55,7 @@ body {
   margin-right: auto;
   text-align: center;
   width: 100%;
+  height: 70px;
   display:flex;
   justify-content: center;
   align-items:center;
@@ -67,7 +68,6 @@ body {
   justify-content: center;
   align-items:center;
   float:left;
-  display: block;
   text-align: center;
   color: rgb(85, 47, 11);
   padding: 1em 1em 1em 1em;
@@ -75,9 +75,10 @@ body {
   font-size: 11pt;
   font-weight: 700;
   margin:0;
+height:100%;
 }
 
-/* Change the color of links on hover */
+
 .topnav a:hover {
   background-color: rgb(238, 212, 157);
   cursor: pointer;
@@ -133,7 +134,7 @@ body {
   align-items:center;
 }
 
-.about-text{
+.home{
   padding-left: 8em;
 }
 .about-text p{
@@ -312,6 +313,36 @@ ul li::before {
   position: relative;
   top: -75px;
 }
+
+.o-mobile{
+  display: none;
+  text-align:center;
+}
+footer{
+  background-color:rgba(238, 212, 157, 0.192);
+  height: 200px;
+  padding: 1em 2em 1em 4em;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.address{
+  flex-direction: column;
+  flex:1;
+  text-align: right;
+  padding-top: 20px;
+}
+.flags{
+  flex-direction: column;
+  flex:1;
+}
+.flags img{
+  margin-top: 1.2em;
+  height: 40px;
+}
+.flag-imgs{
+  flex-direction: row;
+}
 @media screen and (min-width: 800px) and (max-width: 943px){
   .f-desktop{
     display:none;
@@ -353,11 +384,30 @@ ul li::before {
   .image-bg img{
     width:100%;
   }
+  .o-mobile{
+    display: none;
+    text-align:center;
+  }
+  .o-desktop{
+    display:block;
+  }
+  footer{
+    height: 400px;
+    padding: 1em 2em 1em 4em;
+    display: flex;
+    text-align:center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .address{
+    text-align:center;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 799px){
   .topnav  
   {
+    height: 400px;
     display: none;
   }
   .topnav-m a.icon {
@@ -437,5 +487,23 @@ ul li::before {
   }
   .image-bg img{
     width:100%;
+  }
+  .o-mobile{
+    display: block;
+    text-align:center;
+  }
+  .o-desktop{
+    display:none;
+  }
+  footer{
+    height: 400px;
+    padding: 1em 2em 1em 4em;
+    display: flex;
+    text-align:center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .address{
+    text-align:center;
   }
 }
